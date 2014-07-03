@@ -3,36 +3,38 @@ Google Code Jam - Qualification Round Africa 2010
 
 ## Problem A. Store Credit
 ### Problem
-You receive a credit *C* at a local store and would like to buy two items. You first walk through the store and create a 
-list *L* of all available items. From this list you would like to buy two items that add up to the entire value of the 
-credit. The solution you provide will consist of the two integers indicating the positions of the items in your list 
-(smaller number first).
+You receive a credit **C** at a local store and would like to buy two items. You first walk through the store and 
+create a list **L** of all available items. From this list you would like to buy two items that add up to the entire 
+value of the credit. The solution you provide will consist of the two integers indicating the positions of the items 
+in your list (smaller number first).
 
 ### Input
-The first line of input gives the number of cases, *N*. *N* test cases follow. For each test case there will be:
+The first line of input gives the number of cases, **N**. **N** test cases follow. For each test case there will be:
 
-One line containing the value *C*, the amount of credit you have at the store.
-One line containing the value *I*, the number of items in the store.
-One line containing a space separated list of *I* integers. Each integer *P* indicates the price of an item in the 
++ One line containing the value **C**, the amount of credit you have at the store.
++ One line containing the value **I**, the number of items in the store.
++ One line containing a space separated list of **I** integers. Each integer **P** indicates the price of an item in the 
 store. 
-
-Each test case will have exactly one solution.
++ Each test case will have exactly one solution.
 
 ### Output
 For each test case, output one line containing "Case #x: " followed by the indices of the two items whose price adds up 
 to the store credit. The lower index should be output first.
 
 ### Limits
-5 ≤ *C* ≤ 1000
-1 ≤ *P* ≤ 1000
+5 ≤ **C** ≤ 1000
+
+1 ≤ **P** ≤ 1000
 
 ### Small dataset
-*N* = 10
-3 ≤ *I* ≤ 100
+**N** = 10
+
+3 ≤ **I** ≤ 100
 
 ### Large dataset
-*N* = 50
-3 ≤ *I* ≤ 2000
+**N** = 50
+
+3 ≤ **I** ≤ 2000
 
 ### Sample
 
@@ -58,13 +60,13 @@ Output
 ## Problem B. Reverse Words
 
 ### Problem
-Given a list of space separated words, reverse the order of the words. Each line of text contains *L* letters and *W* 
-words. A line will only consist of letters and space characters. There will be exactly one space character between 
+Given a list of space separated words, reverse the order of the words. Each line of text contains **L** letters and 
+**W** words. A line will only consist of letters and space characters. There will be exactly one space character between 
 each pair of consecutive words.
 
 ### Input
-The first line of input gives the number of cases, *N*.
-*N* test cases follow. For each test case there will a line of letters and space characters indicating a list of space 
+The first line of input gives the number of cases, **N**.
+**N** test cases follow. For each test case there will a line of letters and space characters indicating a list of space 
 separated words. Spaces will not appear at the start or end of a line.
 
 ### Output
@@ -74,12 +76,14 @@ For each test case, output one line containing "Case #x: " followed by the list 
 None.
 
 ### Small dataset
-*N* = 5
-1 ≤ *L* ≤ 25
+**N** = 5
+
+1 ≤ **L** ≤ 25
 
 ### Large dataset
-*N* = 100
-1 ≤ *L* ≤ 1000
+**N** = 100
+
+1 ≤ **L** ≤ 1000
 
 ### Sample
 Input 
@@ -108,7 +112,8 @@ indicates B.
 ![T9 Spelling image] (T9.png)
 
 ### Input
-The first line of input gives the number of cases, *N*. *N* test cases follow. Each case is a line of text formatted as
+The first line of input gives the number of cases, **N**. **N** test cases follow. Each case is a line of text 
+formatted as
 
     desired_message
     
@@ -119,7 +124,7 @@ For each test case, output one line containing "Case #x: " followed by the messa
 keypresses.
 
 ### Limits
-1 ≤ *N* ≤ 100.
+1 ≤ **N** ≤ 100.
 
 ### Small dataset
 1 ≤ length of message in characters ≤ 15.
@@ -142,3 +147,5 @@ Output
     Case #2: 999337777
     Case #3: 333666 6660 022 2777
     Case #4: 4433555 555666096667775553
+    
+© 2008-2013 Google
