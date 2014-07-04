@@ -34,6 +34,7 @@ public class ReverseWords {
         PrintWriter outputFile = new PrintWriter(OUTPUT_FILES_PATH + filename.substring(0, filename.length() - 2) + "out");
 
         int testCases = inputFile.nextInt();
+        inputFile.nextLine();   // Get rid of newline
         for (int testCount = 1; testCount <= testCases; testCount++) {
             System.out.print("Case #" + testCount + ": ");
             outputFile.print("Case #" + testCount + ": ");
