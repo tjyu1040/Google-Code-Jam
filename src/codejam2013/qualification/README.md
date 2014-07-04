@@ -1,0 +1,1 @@
+# [Google Code Jam - Qualification Round 2010] (https://code.google.com/codejam/contest/2270488/dashboard)
