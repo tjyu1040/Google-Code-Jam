@@ -1,28 +1,18 @@
-package africa2010.qualification;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
- * GoogleCodeJam created by Timothy on 7/3/2014.
+ * Google Code Jam, Template solution created by Timothy on 7/4/2014.
  */
-public class ReverseWords {
+public class Template {
 
-    public static final String INPUT_FILES_PATH = "InputFiles\\2010\\Africa\\Qualification\\";
-    public static final String OUTPUT_FILES_PATH = "OutputFiles\\2010\\Africa\\Qualification\\";
+    public static final String INPUT_FILES_PATH = "InputFiles\\";
+    public static final String OUTPUT_FILES_PATH = "OutputFiles\\";
 
     public void solve(Scanner inputFile, PrintWriter outputFile) {
-        String line = inputFile.nextLine();
-        String[] words = line.split(" ");
 
-        for (int i = words.length - 1; i > -1; i--) {
-            System.out.print(words[i] + " ");
-            outputFile.print(words[i] + " ");
-        }
-        System.out.println();
-        outputFile.println();
     }
 
     public static void main(String[] args) throws IOException {
@@ -37,7 +27,7 @@ public class ReverseWords {
         for (int testCount = 1; testCount <= testCases; testCount++) {
             System.out.print("Case #" + testCount + ": ");
             outputFile.print("Case #" + testCount + ": ");
-            new ReverseWords().solve(inputFile, outputFile);
+            new Template().solve(inputFile, outputFile);
         }
         outputFile.flush();
         outputFile.close();

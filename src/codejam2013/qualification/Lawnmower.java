@@ -10,44 +10,29 @@ import java.util.Scanner;
  */
 public class Lawnmower {
 
-    public static final String INPUT_FILES_PATH = "InputFiles\\2013\\Qualification\\Lawnmower\\";
-    public static final String OUTPUT_FILES_PATH = "OutputFiles\\2013\\Qualification\\Lawnmower\\";
+    public static final String INPUT_FILES_PATH = "InputFiles\\2013\\Qualification\\";
+    public static final String OUTPUT_FILES_PATH = "OutputFiles\\2013\\Qualification\\";
 
     public int[][] lawnPattern;
 
-    public Lawnmower() throws IOException {
+    public void solve(Scanner inputFile, PrintWriter outputFile){
+        int n = inputFile.nextInt();
+        int m = inputFile.nextInt();
 
-        Scanner keyboard = new Scanner(System.in);
-        System.out.print("Enter file name: ");
-        String filename = keyboard.nextLine();
-
-        Scanner file = new Scanner(new File(INPUT_FILES_PATH + filename));
-        PrintWriter outputFile = new PrintWriter(OUTPUT_FILES_PATH + filename.substring(0, filename.length() - 2) + "out");
-
-        int testCases = file.nextInt();
-        for(int testCount = 1; testCount <= testCases; testCount++){
-            int n = file.nextInt();
-            int m = file.nextInt();
-
-            lawnPattern = new int[n][m];
-            for(int i = 0; i < n; i++){
-                for(int j = 0; j < m; j++){
-                    lawnPattern[i][j] = file.nextInt();
-                }
-            }
-
-            System.out.print("Case #" + testCount + ": ");
-            outputFile.print("Case #" + testCount + ": ");
-
-            if(cutLawn(lawnPattern, n, m)){
-                System.out.println("YES");
-                outputFile.println("YES");
-            } else {
-                System.out.println("NO");
-                outputFile.println("NO");
+        lawnPattern = new int[n][m];
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                lawnPattern[i][j] = inputFile.nextInt();
             }
         }
-        outputFile.close();
+
+        if(cutLawn(lawnPattern, n, m)){
+            System.out.println("YES");
+            outputFile.println("YES");
+        } else {
+            System.out.println("NO");
+            outputFile.println("NO");
+        }
     }
 
     /**
@@ -116,6 +101,21 @@ public class Lawnmower {
     }
 
     public static void main(String[] args) throws IOException {
-        new Lawnmower();
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter file name: ");
+        String filename = keyboard.nextLine();
+
+        Scanner inputFile = new Scanner(new File(INPUT_FILES_PATH + filename));
+        PrintWriter outputFile = new PrintWriter(OUTPUT_FILES_PATH + filename.substring(0, filename.length() - 2) + "out");
+
+        int testCases = inputFile.nextInt();
+        for(int testCount = 1; testCount <= testCases; testCount++){
+            System.out.print("Case #" + testCount + ": ");
+            outputFile.print("Case #" + testCount + ": ");
+            new Lawnmower().solve(inputFile, outputFile);
+        }
+        outputFile.flush();
+        outputFile.close();
+        inputFile.close();
     }
 }
