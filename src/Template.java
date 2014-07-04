@@ -12,7 +12,7 @@ public class Template {
     public static final String OUTPUT_FILES_PATH = "OutputFiles\\";
 
     public void solve(Scanner inputFile, PrintWriter outputFile) {
-
+        // Your solution here...
     }
 
     public static void main(String[] args) throws IOException {
