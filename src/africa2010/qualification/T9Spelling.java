@@ -70,12 +70,16 @@ public class T9Spelling {
         // Check input and output directories
         File inputDirectory = new File(INPUT_FILES_PATH);
         if(!inputDirectory.exists()){
-            inputDirectory.mkdirs();
+            if(!inputDirectory.mkdirs()){
+                System.out.println("Failed to create input directory.");
+            }
         }
         System.out.println(inputDirectory.getAbsolutePath());
         File outputDirectory = new File(OUTPUT_FILES_PATH);
         if(!outputDirectory.exists()){
-            outputDirectory.mkdirs();
+            if(!outputDirectory.mkdirs()){
+                System.out.println("Failed to create output directory.");
+            }
         }
 
         Scanner keyboard = new Scanner(System.in);
