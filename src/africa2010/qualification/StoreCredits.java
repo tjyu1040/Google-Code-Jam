@@ -33,6 +33,17 @@ public class StoreCredits {
     }
 
     public static void main(String[] args) throws IOException {
+        // Check input and output directories
+        File inputDirectory = new File(INPUT_FILES_PATH);
+        if(!inputDirectory.exists()){
+            inputDirectory.mkdirs();
+        }
+        System.out.println(inputDirectory.getAbsolutePath());
+        File outputDirectory = new File(OUTPUT_FILES_PATH);
+        if(!outputDirectory.exists()){
+            outputDirectory.mkdirs();
+        }
+
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter file name: ");
         String filename = keyboard.nextLine();
